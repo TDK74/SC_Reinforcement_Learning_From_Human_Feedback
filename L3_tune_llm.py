@@ -1,4 +1,5 @@
 import math
+import subprocess
 import google.cloud.aiplatform as aiplatform
 
 from google_cloud_pipeline_components.preview.llm import rlhf_pipeline
@@ -11,6 +12,9 @@ RLHF_PIPELINE_PKG_PATH = "rlhf_pipeline.yaml"
 
 ## ------------------------------------------------------ ##
 compiler.Compiler().compile(pipeline_func= rlhf_pipeline, package_path= RLHF_PIPELINE_PKG_PATH)
+
+## ------------------------------------------------------ ##
+subprocess.run(["head", "rlhf_pipeline.yaml"])
 
 ## ------------------------------------------------------ ##
 PREF_DATASET_SIZE = 3000
