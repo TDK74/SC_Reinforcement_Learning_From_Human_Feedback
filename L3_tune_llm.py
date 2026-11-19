@@ -10,7 +10,7 @@ from utils import authenticate
 RLHF_PIPELINE_PKG_PATH = "rlhf_pipeline.yaml"
 
 ## ------------------------------------------------------ ##
-compiler.Compiler().compile(pipeline_func = rlhf_pipeline, package_path = RLHF_PIPELINE_PKG_PATH)
+compiler.Compiler().compile(pipeline_func= rlhf_pipeline, package_path= RLHF_PIPELINE_PKG_PATH)
 
 ## ------------------------------------------------------ ##
 PREF_DATASET_SIZE = 3000
@@ -71,7 +71,7 @@ credentials, PROJECT_ID, STAGING_BUCKET = authenticate()
 REGION = "europe-west4"
 
 ## ------------------------------------------------------ ##
-aiplatform.init(project = PROJECT_ID, location = REGION, credentials = credentials)
+aiplatform.init(project= PROJECT_ID, location= REGION, credentials= credentials)
 
 ## ------------------------------------------------------ ##
-RLHF_PIPELINE_PKG_PATH
+print(RLHF_PIPELINE_PKG_PATH)
